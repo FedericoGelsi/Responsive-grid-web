@@ -20,17 +20,7 @@ body{
 
 
 
-/*nnw Styles*/
-
 /*Header*/
-.nnw-hero{
-    grid-area: hero;
-}
-
-.nnw-main-banner{
-    display: block;
-    width: 100%;
-}
 
 header{
     grid-area: header;
@@ -39,6 +29,7 @@ header{
     width: 100%;
     z-index: 6;
 }
+
 .nnw-nav{
     display: grid;
     grid-template-areas: 
@@ -111,7 +102,6 @@ header{
     text-align: center;
 }
 
-
 .nnw-navigation li a:after{
     content: "";
     display: block;
@@ -126,6 +116,36 @@ header{
     width: 100%;
 }
 
+/* Hero*/
+
+.nnw-hero{
+    grid-area: hero;
+}
+
+.nnw-hero-title{
+    display: block;
+    position: relative;
+    z-index: 3;
+    font-size: 5em;
+    font-weight: normal;
+    color: #f5f5f5;
+}
+
+.nnw-hero-subtitle{
+    display: block;
+    position: relative;
+    z-index: 3;
+}
+
+.nnw-main-banner{
+    display: block;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+/* Section general*/
+
 .nnw-content{
     grid-area: content;
 }
@@ -136,6 +156,8 @@ header{
     font-size: 3em;
     font-weight: lighter;
 }
+
+/* Gallery */
 
 .nnw-gallery{
     display: grid;
@@ -163,6 +185,9 @@ header{
     -webkit-transition: all 0.8s ease;
 }
 
+
+/* Footer */
+
 .nnw-footer{
     grid-area: footer;
     display: flex;
@@ -172,6 +197,7 @@ header{
     margin-top: 30px;
     background-color: rgb(24, 25, 47);
 }
+
 
 .nnw-footer p{
     font-size: 1em;
@@ -198,7 +224,7 @@ header{
         grid-template-areas: 
             ". logo logo ham"
         ;
-        grid-template-rows: 3rem;
+        grid-template-rows: 3rem auto;
     }
 
     .nnw-ham{
@@ -209,7 +235,7 @@ header{
     .nnw-navigation{
         display: none;
         grid-template-columns: 100%;
-        grid-template-rows: repeat(auto-fit, auto);
+        grid-template-rows: repeat(auto-fit, minmax(1rem, auto));
     }
 
     .nnw-gallery{
@@ -221,4 +247,7 @@ header{
         -webkit-transform: none;
     }
     
+    .nnw-footer{
+        margin: 0;
+    }
 }
